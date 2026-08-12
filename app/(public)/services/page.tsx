@@ -14,6 +14,10 @@ export const metadata: Metadata = {
       ru: "/services?lang=ru",
     },
   },
+  openGraph: {
+    title: "Services — Zuxriddin Hasanov",
+    description: "Frontend development services by Zuxriddin Hasanov - development, support, UI/UX implementation, and mentoring.",
+  },
 };
 
 

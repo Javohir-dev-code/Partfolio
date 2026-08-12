@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     canonical: "/about",
     languages: { en: "/about", uz: "/about?lang=uz", ru: "/about?lang=ru" },
   },
+  openGraph: {
+    title: "About Zuxriddin Hasanov — Frontend Developer & Mentor",
+    description: "Learn more about Zuxriddin Hasanov - Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz.",
+  },
 };
 
 

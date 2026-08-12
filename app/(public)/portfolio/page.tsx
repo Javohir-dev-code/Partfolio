@@ -14,6 +14,10 @@ export const metadata: Metadata = {
       ru: "/portfolio?lang=ru",
     },
   },
+  openGraph: {
+    title: "Portfolio — Zuxriddin Hasanov",
+    description: "Explore projects built by Zuxriddin Hasanov - TypeX.uz, Eko-gps.uz, UzbekUSA and more.",
+  },
 };
 
 

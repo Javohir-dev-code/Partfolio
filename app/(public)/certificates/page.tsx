@@ -13,6 +13,10 @@ export const metadata: Metadata = {
       ru: "/certificates?lang=ru",
     },
   },
+  openGraph: {
+    title: "Certificates — Zuxriddin Hasanov",
+    description: "Courses and certifications completed by Zuxriddin Hasanov to improve his skills.",
+  },
 };
 
 

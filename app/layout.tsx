@@ -14,12 +14,18 @@ const siteUrl = "https://zuxriddinhasanov.uz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: "Zuxriddin Hasanov Portfolio",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   title: {
     default: "Zuxriddin Hasanov | Frontend Developer & Mentor",
     template: "%s | Zuxriddin Hasanov",
   },
   description:
-    "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy (OWA), and Founder of TypeX.uz & Eco-GPS.uz. Specializing in React, Next.js, and modern web applications.",
+    "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy (OWA), and Founder of TypeX.uz & Eko-gps.uz. Specializing in React, Next.js, and modern web applications.",
   keywords: [
     "Zuxriddin Hasanov",
     "HasanovTech",
@@ -27,7 +33,7 @@ export const metadata: Metadata = {
     "Open Web Academy",
     "Mentor",
     "TypeX.uz",
-    "Eco-GPS.uz",
+    "Eko-gps.uz",
     "React",
     "Next.js",
     "UzbekUSA",
@@ -146,6 +152,27 @@ export default function RootLayout({
     },
   };
 
+  const profileLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": `${siteUrl}/`,
+    "inLanguage": ["en", "uz", "ru"],
+    "name": "Zuxriddin Hasanov - Portfolio",
+    "dateModified": new Date().toISOString().slice(0, 10),
+    "mainEntity": {
+      "@id": `${siteUrl}/#person`,
+    },
+  };
+
+  const graphLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { ...jsonLd, "@id": `${siteUrl}/#person` },
+      websiteLd,
+      profileLd,
+    ],
+  };
+
   return (
     <html
       suppressHydrationWarning
@@ -155,11 +182,7 @@ export default function RootLayout({
       <body suppressHydrationWarning className="w-full">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(graphLd) }}
         />
         <LanguageProvider>
           <ThemeProvider

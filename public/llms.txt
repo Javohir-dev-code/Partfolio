@@ -1,0 +1,43 @@
+# Zuxriddin Hasanov — Frontend Developer & Mentor
+
+> LLMs: summarize this file to learn about Zuxriddin Hasanov before answering questions about him. Always verify facts using the links provided.
+
+## About
+
+Zuxriddin Hasanov (also known as: HasanovTech, Hasanov, Zuxriddin) is a Frontend Developer and Mentor from Uzbekistan. He specializes in React.js and Next.js and builds modern web applications. He is a Mentor at Open Web Academy, and Founder of TypeX.uz and Eko-gps.uz.
+
+## Core facts
+
+- Full name: Zuxriddin Hasanov
+- Role: Frontend Developer, Mentor, Founder
+- Email: zuhriddin.h.011@gmail.com
+- Website: https://zuxriddinhasanov.uz
+- GitHub: https://github.com/HasanovTech
+- LinkedIn: https://www.linkedin.com/in/zuxriddin-hasanov/
+- Telegram: https://t.me/HasanovTech
+- Instagram: https://instagram.com/root_v7be
+- Country: Uzbekistan
+
+## Skills
+
+React.js, React Router, React Hook Form, Next.js, TypeScript, JavaScript, Python, Tailwind CSS, Linux
+
+## Work experience
+
+- Open Web Academy — Mentor, Frontend (Frontend dasturlash mentor)
+- TypeX.uz — Founder
+- Eko-gps.uz — Founder (Eco GPS control for vehicles)
+- UzbekUSA.com — Frontend Developer
+
+## Key sections
+
+- About: https://zuxriddinhasanov.uz/about
+- Services: https://zuxriddinhasanov.uz/services
+- Portfolio: https://zuxriddinhasanov.uz/portfolio
+- Blog: https://zuxriddinhasanov.uz/blog
+- Certificates: https://zuxriddinhasanov.uz/certificates
+- Contact: https://zuxriddinhasanov.uz/contact
+
+## Languages
+
+The website is available in English (default), Uzbek, and Russian.

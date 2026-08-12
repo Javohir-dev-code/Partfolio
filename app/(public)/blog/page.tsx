@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     canonical: "/blog",
     languages: { en: "/blog", uz: "/blog?lang=uz", ru: "/blog?lang=ru" },
   },
+  openGraph: {
+    title: "Blog — Zuxriddin Hasanov",
+    description: "Articles about web development, best practices, and modern technologies by Zuxriddin Hasanov.",
+  },
 };
 
 

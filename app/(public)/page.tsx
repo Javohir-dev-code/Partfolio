@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     canonical: "/",
     languages: { en: "/", uz: "/?lang=uz", ru: "/?lang=ru" },
   },
+  openGraph: {
+    title: "Zuxriddin Hasanov | Frontend Developer & Mentor",
+    description:
+      "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eco-GPS.uz. Specializing in React, Next.js, and modern web applications.",
+  },
 };
 
 export default function HomePage() {
