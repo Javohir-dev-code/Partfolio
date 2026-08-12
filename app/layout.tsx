@@ -99,7 +99,7 @@ export default function RootLayout({
     "description":
       "Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eco-GPS.uz.",
     "url": siteUrl,
-    "email": "mailto:zuxriddinhasanov@gmail.com",
+    "email": "mailto:zuhriddin.h.011@gmail.com",
     "image": `${siteUrl}/opengraph-image`,
     "nationality": "Uzbekistan",
     "address": {
@@ -115,7 +115,7 @@ export default function RootLayout({
     "worksFor": [
       { "@type": "Organization", "name": "Open Web Academy", "url": "https://www.openwebacademy.uz" },
       { "@type": "Organization", "name": "TypeX.uz", "url": "https://typex.uz" },
-      { "@type": "Organization", "name": "Eco-gps.uz", "url": "https://eco-gps.uz" },
+      { "@type": "Organization", "name": "Eko-gps.uz", "url": "https://eko-gps.uz" },
       { "@type": "Organization", "name": "UzbekUSA.com" },
     ],
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Open Web Academy" },

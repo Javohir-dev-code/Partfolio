@@ -48,7 +48,7 @@ export function ProfileCard() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("zuxriddinhasanov@gmail.com");
+    navigator.clipboard.writeText("zuhriddin.h.011@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

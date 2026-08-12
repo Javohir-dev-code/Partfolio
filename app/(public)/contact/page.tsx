@@ -77,7 +77,7 @@ export default function Contact() {
                 {/* Contact info */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-7">
                   <Link
-                    href="mailto:zuxriddinhasanov@gmail.com"
+                    href="mailto:zuhriddin.h.011@gmail.com"
                     className="flex items-center gap-4 bg-mini-card rounded-2xl p-6 no-underline transition-all hover:border hover:border-[#4770FF]/40"
                   >
                     <span className="shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-[#4770FF]/10 text-[#4770FF]">
@@ -91,7 +91,7 @@ export default function Contact() {
                         {t("contact.email")}
                       </span>
                       <span className="block text-lg font-semibold text-head truncate">
-                        zuxriddinhasanov@gmail.com
+                        zuhriddin.h.011@gmail.com
                       </span>
                     </span>
                   </Link>
