@@ -3,15 +3,23 @@ import { useEffect, useState } from "react";
 
 export function Preloader() {
   const [hidden, setHidden] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    const timer = setTimeout(() => setHidden(true), 1500);
-    return () => clearTimeout(timer);
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    try {
+      if (sessionStorage.getItem("folio_visited")) {
+        setHidden(true);
+      } else {
+        sessionStorage.setItem("folio_visited", "1");
+        timer = setTimeout(() => setHidden(true), 1500);
+      }
+    } catch {
+      timer = setTimeout(() => setHidden(true), 1500);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
   }, []);
-
-  if (!mounted) return null;
 
   return (
     <div
