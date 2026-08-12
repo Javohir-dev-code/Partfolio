@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Portfolio | Zuxriddin Hasanov",
-  description: "Explore projects built by Zuxriddin Hasanov - TypeX.uz, Eco-GPS.uz, UzbekUSA and more.",
+  description: "Explore projects built by Zuxriddin Hasanov - TypeX.uz, Eko-gps.uz, UzbekUSA and more.",
   alternates: {
     canonical: "/portfolio",
     languages: {

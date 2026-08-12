@@ -103,7 +103,7 @@ export default function RootLayout({
     "alternateName": ["HasanovTech", "Hasanov", "Zuxriddin"],
     "jobTitle": ["Frontend Developer", "Mentor", "Founder"],
     "description":
-      "Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eco-GPS.uz.",
+      "Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eko-gps.uz.",
     "url": siteUrl,
     "email": "mailto:zuhriddin.h.011@gmail.com",
     "image": `${siteUrl}/opengraph-image`,

@@ -5,7 +5,7 @@ import { Services } from "@/components/public/Services";
 export const metadata: Metadata = {
   title: "Zuxriddin Hasanov | Frontend Developer & Mentor",
   description:
-    "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eco-GPS.uz. Specializing in React, Next.js, and modern web applications.",
+    "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eko-gps.uz. Specializing in React, Next.js, and modern web applications.",
   alternates: {
     canonical: "/",
     languages: { en: "/", uz: "/?lang=uz", ru: "/?lang=ru" },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Zuxriddin Hasanov | Frontend Developer & Mentor",
     description:
-      "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eco-GPS.uz. Specializing in React, Next.js, and modern web applications.",
+      "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eko-gps.uz. Specializing in React, Next.js, and modern web applications.",
   },
 };
 
