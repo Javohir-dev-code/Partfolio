@@ -53,7 +53,7 @@ export function WorkExperience({ experiences }: WorkExperienceProps) {
         <h3 className="text-2xl font-bold text-head mb-8">
           {t("workexp.title")}
         </h3>
-        <div className="overflow-hidden relative h-[150px] sm:h-[170px] lg:h-[190px]">
+        <div className="overflow-hidden relative h-[180px] sm:h-[200px] lg:h-[220px]">
           {/* Fading effect on bottom and top if desired, but let's keep it clean */}
           <div className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-card to-transparent z-10 pointer-events-none" />
           <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-card to-transparent z-10 pointer-events-none" />
@@ -70,15 +70,15 @@ export function WorkExperience({ experiences }: WorkExperienceProps) {
                         {exp.date}
                       </span>
                     </div>
-                    <div className="flex items-center gap-3.5 sm:gap-4">
-                      <div className="w-[48px] h-[48px] sm:w-[68px] sm:h-[68px] shrink-0 rounded-2xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5 overflow-hidden">
+                    <div className="flex-1 flex items-center gap-3.5 sm:gap-4 w-full">
+                      <div className="w-[44px] h-[44px] sm:w-[56px] sm:h-[56px] shrink-0 rounded-2xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5 overflow-hidden">
                         {getCompanyIcon(exp.company)}
                       </div>
                       <div className="flex flex-col min-w-0">
-                        <h4 className="text-[17px] sm:text-[20px] lg:text-[22px] font-bold text-head leading-snug line-clamp-1" title={exp.title}>
+                        <h4 className="text-[16px] sm:text-[18px] lg:text-[20px] font-bold text-head leading-snug" title={exp.title}>
                           {exp.title}
                         </h4>
-                        <span className="text-[13.5px] sm:text-[16px] lg:text-[17px] font-medium text-p mt-0.5 sm:mt-1 line-clamp-1" title={exp.company}>
+                        <span className="text-[13px] sm:text-[15px] lg:text-[16px] font-medium text-p mt-0.5" title={exp.company}>
                           {exp.company}
                         </span>
                       </div>
