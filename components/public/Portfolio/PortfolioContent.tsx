@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ProfileCard } from "@/components/public/ProfileCard";
-import { mockProjects } from "@/lib/data";
+import { IProject } from "@/types";
 import { useLanguage } from "@/lib/i18n";
 
 const ArrowIcon = () => (
@@ -28,9 +29,8 @@ const ArrowIcon = () => (
   </svg>
 );
 
-export function PortfolioContent() {
+export function PortfolioContent({ projects }: { projects: IProject[] }) {
   const { t } = useLanguage();
-  const projects = mockProjects;
 
   return (
     <section className="py-10 pb-8">
@@ -53,62 +53,73 @@ export function PortfolioContent() {
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-8 mb-7">
-                  {projects.map((project) => (
-                    <Link
+                <div className="flex flex-col gap-10 mb-7">
+                  {projects.map((project, i) => (
+                    <motion.div
                       key={project.id}
-                      href={project.site_link ?? project.detail_link ?? "/portfolio"}
-                      target="_blank"
-                      className="group block border border-border rounded-3xl overflow-hidden transition-all duration-300 hover:border-[#4770FF] no-underline bg-mini-card p-4"
+                      initial={{ opacity: 0, y: 32 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-60px" }}
+                      transition={{ duration: 0.55, delay: i * 0.1, ease: "easeOut" }}
                     >
-                      {project.image && (
-                        <div className="relative overflow-hidden rounded-2xl bg-card border border-border/50 aspect-[16/10] sm:aspect-[16/9]">
-                          {project.image_light ? (
-                            <>
+                      <Link
+                        href={project.site_link ?? project.detail_link ?? "/portfolio"}
+                        target="_blank"
+                        className="group block border border-border rounded-3xl overflow-hidden transition-all duration-300 hover:border-[#4770FF] hover:shadow-xl hover:shadow-[#4770FF]/10 no-underline bg-mini-card p-5"
+                      >
+                        {project.image && (
+                          <div className="relative overflow-hidden rounded-2xl bg-card border border-border/50 aspect-[16/9]">
+                            {project.image_light ? (
+                              <>
+                                <Image
+                                  src={project.image}
+                                  alt={project.title}
+                                  width={1200}
+                                  height={675}
+                                  className="w-full h-full hidden dark:block object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                                />
+                                <Image
+                                  src={project.image_light}
+                                  alt={project.title}
+                                  width={1200}
+                                  height={675}
+                                  className="w-full h-full block dark:hidden object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                                />
+                              </>
+                            ) : (
                               <Image
                                 src={project.image}
                                 alt={project.title}
-                                width={1000}
-                                height={600}
-                                className="w-full h-full hidden dark:block object-contain"
+                                width={1200}
+                                height={675}
+                                className="w-full h-full block object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                               />
-                              <Image
-                                src={project.image_light}
-                                alt={project.title}
-                                width={1000}
-                                height={600}
-                                className="w-full h-full block dark:hidden object-contain"
-                              />
-                            </>
-                          ) : (
-                            <Image
-                              src={project.image}
-                              alt={project.title}
-                              width={1000}
-                              height={600}
-                              className="w-full h-full block object-contain"
-                            />
-                          )}
-                          <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
-                        </div>
-                      )}
-                      <div className="flex-col items-center justify-center text-center mt-6 mb-3 gap-2">
-                        <h3 className="text-3xl font-bold text-head mb-2 transition-colors group-hover:text-[#4770FF]">
-                          {project.title}
-                        </h3>
-                        {project.subtitle && (
-                          <p className="text-[18px] text-p">
-                            {project.subtitle}
-                          </p>
+                            )}
+                            <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300" />
+                          </div>
                         )}
-                        <div className="mt-5 flex items-center justify-center gap-5">
-                           <span className="flex items-center gap-1.5 text-base font-medium text-[#4770FF]">View Details <ArrowIcon /></span>
-                           {project.site_link && (
-                             <span className="flex items-center gap-1.5 text-base font-medium text-[#4770FF]">Visit Site <ArrowIcon /></span>
-                           )}
+                        <div className="flex flex-col items-center justify-center text-center mt-7 mb-4 gap-2.5">
+                          <h3 className="text-3xl sm:text-4xl font-bold text-head transition-colors group-hover:text-[#4770FF]">
+                            {project.title}
+                          </h3>
+                          {project.subtitle && (
+                            <p className="text-lg sm:text-xl text-p max-w-[560px]">
+                              {project.subtitle}
+                            </p>
+                          )}
+                          <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
+                             <span className="flex items-center gap-1.5 text-base font-medium text-[#4770FF]">
+                               View Details <ArrowIcon />
+                             </span>
+                             {project.site_link && (
+                               <span className="flex items-center gap-1.5 text-base font-medium text-[#4770FF]">
+                                 Visit Site <ArrowIcon />
+                               </span>
+                             )}
+                          </div>
                         </div>
-                      </div>
-                    </Link>
+                      </Link>
+                    </motion.div>
                   ))}
                 </div>
 

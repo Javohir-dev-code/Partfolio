@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
@@ -18,6 +20,21 @@ export async function POST(req: NextRequest) {
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+    }
+
+    if (isSupabaseConfigured()) {
+      try {
+        const supabase = await createClient();
+        await supabase.from("messages").insert({
+          name,
+          email,
+          subject: subject || null,
+          message,
+          is_read: false,
+        });
+      } catch (e) {
+        console.error("[supabase] message insert failed:", e);
+      }
     }
 
     const botToken = process.env.TELEGRAM_BOT_TOKEN;

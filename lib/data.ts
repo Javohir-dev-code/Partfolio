@@ -5,6 +5,8 @@ import {
   IBlog,
   ICertificate,
 } from "@/types";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createClient } from "@/lib/supabase/server";
 
 export const mockExperiences: IExperience[] = [
   {
@@ -107,6 +109,7 @@ export const mockBlogs: IBlog[] = [
   {
     id: "1",
     title: "The Complete Guide to Web Performance Optimization",
+    slug: "web-performance-optimization",
     date: "Dec 1, 2023",
     image: "bg-gradient-to-br from-[#2D6C95] to-[#2B1B54]",
     tag: "Performance",
@@ -117,6 +120,7 @@ export const mockBlogs: IBlog[] = [
   {
     id: "2",
     title: "Modern CSS Layout Techniques: Grid, Flexbox, and Beyond",
+    slug: "modern-css-layout-techniques",
     date: "Nov 25, 2023",
     image: "bg-gradient-to-br from-[#FF9A9E] to-[#FECFEF]",
     tag: "CSS",
@@ -127,6 +131,7 @@ export const mockBlogs: IBlog[] = [
   {
     id: "3",
     title: "Next.js 14: New Features and Performance Improvements",
+    slug: "nextjs-14-new-features",
     date: "Nov 20, 2023",
     image: "bg-gradient-to-br from-[#4ADE80] to-[#2DD4BF]",
     tag: "Next.js",
@@ -137,6 +142,7 @@ export const mockBlogs: IBlog[] = [
   {
     id: "4",
     title: "TypeScript Best Practices Every Developer Should Know in 2024",
+    slug: "typescript-best-practices-2024",
     date: "Nov 15, 2023",
     image: "bg-gradient-to-br from-[#22D3EE] to-[#0EA5E9]",
     tag: "TypeScript",
@@ -147,6 +153,7 @@ export const mockBlogs: IBlog[] = [
   {
     id: "5",
     title: "Mastering React Hooks: A Complete Guide for Developers",
+    slug: "mastering-react-hooks",
     date: "Nov 10, 2023",
     image: "bg-gradient-to-br from-[#F472B6] to-[#E11D48]",
     tag: "React",
@@ -157,6 +164,7 @@ export const mockBlogs: IBlog[] = [
   {
     id: "6",
     title: "Linux Command Line Mastery for Frontend Developers",
+    slug: "linux-command-line-frontend",
     date: "Nov 5, 2023",
     image: "bg-gradient-to-br from-[#1E293B] to-[#0F172A]",
     tag: "Linux",
@@ -179,22 +187,43 @@ export const mockCertificates: ICertificate[] = [
   }
 ];
 
+async function withSupabase<T>(table: string, fallback: () => Promise<T>): Promise<T> {
+  if (!isSupabaseConfigured()) {
+    return fallback();
+  }
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from(table)
+      .select("*")
+      .order("order_index", { ascending: true })
+      .order("created_at", { ascending: true });
+
+    if (error) throw error;
+    if (data && data.length > 0) return data as T;
+    return fallback();
+  } catch (e) {
+    console.error(`[supabase] ${table} fetch failed, using mock:`, e);
+    return fallback();
+  }
+}
+
 export async function getExperiences(): Promise<IExperience[]> {
-  return mockExperiences;
+  return withSupabase<IExperience[]>("experiences", async () => mockExperiences);
 }
 
 export async function getSkills(): Promise<ISkill[]> {
-  return mockSkills;
+  return withSupabase<ISkill[]>("skills", async () => mockSkills);
 }
 
 export async function getProjects(): Promise<IProject[]> {
-  return mockProjects;
+  return withSupabase<IProject[]>("projects", async () => mockProjects);
 }
 
 export async function getBlogs(): Promise<IBlog[]> {
-  return mockBlogs;
+  return withSupabase<IBlog[]>("blogs", async () => mockBlogs);
 }
 
 export async function getCertificates(): Promise<ICertificate[]> {
-  return mockCertificates;
+  return withSupabase<ICertificate[]>("certificates", async () => mockCertificates);
 }

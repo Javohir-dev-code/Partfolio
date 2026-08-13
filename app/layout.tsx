@@ -1,14 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import "@fontsource-variable/inter";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/lib/i18n";
 import { Preloader } from "@/components/public/Preloader";
-
-const interSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
-});
 
 const siteUrl = "https://zuxriddinhasanov.uz";
 
@@ -177,7 +172,7 @@ export default function RootLayout({
     <html
       suppressHydrationWarning
       lang="en"
-      className={`${interSans.variable} antialiased`}
+      className="antialiased"
     >
       <body suppressHydrationWarning className="w-full">
         <script

@@ -285,22 +285,25 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const urlLang = params.get("lang") as Lang | null;
-    const valid = ["en", "uz", "ru"];
-    if (urlLang && valid.includes(urlLang)) {
-      setLangState(urlLang);
-      try {
-        localStorage.setItem("lang", urlLang);
-      } catch {
-        /* ignore */
+    const timer = setTimeout(() => {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get("lang") as Lang | null;
+      const valid = ["en", "uz", "ru"];
+      if (urlLang && valid.includes(urlLang)) {
+        setLangState(urlLang);
+        try {
+          localStorage.setItem("lang", urlLang);
+        } catch {
+          /* ignore */
+        }
+      } else {
+        const saved = localStorage.getItem("lang") as Lang | null;
+        if (saved && valid.includes(saved)) {
+          setLangState(saved);
+        }
       }
-    } else {
-      const saved = localStorage.getItem("lang") as Lang | null;
-      if (saved && valid.includes(saved)) {
-        setLangState(saved);
-      }
-    }
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const setLang = useCallback((next: Lang) => {

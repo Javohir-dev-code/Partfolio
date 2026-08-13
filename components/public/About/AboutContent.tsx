@@ -2,12 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProfileCard } from "@/components/public/ProfileCard";
-import { mockSkills } from "@/lib/data";
+import { ISkill } from "@/types";
 import { useLanguage } from "@/lib/i18n";
 
-export function AboutContent() {
+export function AboutContent({ skills }: { skills: ISkill[] }) {
   const { t } = useLanguage();
-  const skills = mockSkills;
 
   return (
     <section className="py-10 pb-8">

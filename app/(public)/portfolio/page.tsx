@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { PortfolioContent } from "@/components/public/Portfolio/PortfolioContent";
 import { PortfolioSkeleton } from "@/components/public/Portfolio/PortfolioSkeleton";
+import { getProjects } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,10 +22,12 @@ export const metadata: Metadata = {
 };
 
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const projects = await getProjects();
+
   return (
     <Suspense fallback={<PortfolioSkeleton />}>
-      <PortfolioContent />
+      <PortfolioContent projects={projects} />
     </Suspense>
   );
 }

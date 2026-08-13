@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { CertificatesContent } from "@/components/public/Certificates/CertificatesContent";
+import { getCertificates } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -71,10 +72,12 @@ function CertificatesSkeleton() {
   );
 }
 
-export default function CertificatesPage() {
+export default async function CertificatesPage() {
+  const certificates = await getCertificates();
+
   return (
     <Suspense fallback={<CertificatesSkeleton />}>
-      <CertificatesContent />
+      <CertificatesContent certificates={certificates} />
     </Suspense>
   );
 }

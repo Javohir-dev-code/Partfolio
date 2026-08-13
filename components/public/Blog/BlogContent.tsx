@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ProfileCard } from "@/components/public/ProfileCard";
-import { mockBlogs } from "@/lib/data";
+import { IBlog } from "@/types";
 import { useLanguage } from "@/lib/i18n";
 
-export function BlogContent() {
+export function BlogContent({ posts }: { posts: IBlog[] }) {
   const { t } = useLanguage();
-  const posts = mockBlogs;
 
   return (
     <section className="py-10 pb-8">
@@ -29,13 +29,17 @@ export function BlogContent() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {posts.map((post) => (
-                    <div
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+                  {posts.map((post, i) => (
+                    <motion.div
                       key={post.id}
-                      className="rounded-3xl overflow-hidden border border-border transition-all duration-300 hover:border-[#4770FF] hover:shadow-lg hover:-translate-y-1"
+                      initial={{ opacity: 0, y: 24 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-40px" }}
+                      transition={{ duration: 0.5, delay: (i % 2) * 0.08, ease: "easeOut" }}
+                      className="h-full flex flex-col rounded-3xl overflow-hidden border border-border bg-card transition-all duration-300 hover:border-[#4770FF] hover:shadow-lg hover:-translate-y-1"
                     >
-                      <div className="relative">
+                      <div className="relative shrink-0">
                         <Link
                           href={`/blog/${post.slug || "#"}`}
                           className="block overflow-hidden group h-[220px]"
@@ -51,7 +55,7 @@ export function BlogContent() {
                                 alt={post.title}
                                 width={600}
                                 height={400}
-                                className="w-full h-auto block transition-transform duration-500 group-hover:scale-105 object-cover"
+                                className="w-full h-full block transition-transform duration-500 group-hover:scale-105 object-cover"
                               />
                             )
                           )}
@@ -65,14 +69,14 @@ export function BlogContent() {
                           </Link>
                         )}
                       </div>
-                      <div className="px-5 py-5">
+                      <div className="px-5 py-5 flex flex-col flex-1">
                         <Link
                           href={`/blog/${post.slug || "#"}`}
-                          className="block text-[21px] font-bold text-head no-underline leading-[1.45] mb-4 transition-colors hover:text-[#4770FF]"
+                          className="block text-[21px] font-bold text-head no-underline leading-[1.45] mb-4 transition-colors hover:text-[#4770FF] line-clamp-2"
                         >
                           {post.title}
                         </Link>
-                        <ul className="flex items-center gap-4 list-none p-0 m-0">
+                        <ul className="flex items-center gap-4 list-none p-0 m-0 mt-auto">
                           {post.read_time && (
                             <li className="text-[16px] font-medium text-p relative after:content-['•'] after:absolute after:-right-2.5 after:text-gray-500">
                               {post.read_time}
@@ -83,7 +87,7 @@ export function BlogContent() {
                           </li>
                         </ul>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>

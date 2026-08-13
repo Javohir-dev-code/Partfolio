@@ -2,12 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProfileCard } from "@/components/public/ProfileCard";
-import { mockCertificates } from "@/lib/data";
+import { ICertificate } from "@/types";
 import { useLanguage } from "@/lib/i18n";
 
-export function CertificatesContent() {
+export function CertificatesContent({ certificates }: { certificates: ICertificate[] }) {
   const { t } = useLanguage();
-  const certificates = mockCertificates;
 
   return (
     <section className="py-10 pb-8">

@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { AboutContent } from "@/components/public/About/AboutContent";
 import { AboutSkeleton } from "@/components/public/About/AboutSkeleton";
+import { getSkills } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,10 +18,12 @@ export const metadata: Metadata = {
 };
 
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const skills = await getSkills();
+
   return (
     <Suspense fallback={<AboutSkeleton />}>
-      <AboutContent />
+      <AboutContent skills={skills} />
     </Suspense>
   );
 }

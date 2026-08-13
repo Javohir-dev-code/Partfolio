@@ -8,7 +8,7 @@ export function Preloader() {
     let timer: ReturnType<typeof setTimeout> | undefined;
     try {
       if (sessionStorage.getItem("folio_visited")) {
-        setHidden(true);
+        timer = setTimeout(() => setHidden(true), 0);
       } else {
         sessionStorage.setItem("folio_visited", "1");
         timer = setTimeout(() => setHidden(true), 1500);
