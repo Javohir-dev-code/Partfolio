@@ -105,7 +105,7 @@ export function AboutContent({ skills }: { skills: ISkill[] }) {
                         className="group relative w-20 h-20 flex items-center justify-center bg-mini-card border border-border rounded-2xl cursor-pointer transition-all hover:border-[#4770FF]"
                       >
                         <Image
-                          src={`/assets/img/icons/${skill.file}.${skill.ext}`}
+                          src={skill.file.startsWith("http") ? skill.file : `/assets/img/icons/${skill.file}.${skill.ext || 'svg'}`}
                           alt={skill.name}
                           width={48}
                           height={48}

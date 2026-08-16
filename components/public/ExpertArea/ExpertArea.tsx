@@ -32,7 +32,7 @@ export function ExpertArea({ skills }: ExpertAreaProps) {
             >
               <div className="flex justify-center w-full bg-mini-card py-6 rounded-xl border border-transparent transition-colors hover:border-[#4770FF]">
                 <Image
-                  src={`/assets/img/icons/${skill.file}.${skill.ext}`}
+                  src={skill.file.startsWith("http") ? skill.file : `/assets/img/icons/${skill.file}.${skill.ext || 'svg'}`}
                   alt={skill.name}
                   width={48}
                   height={48}

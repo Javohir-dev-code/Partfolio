@@ -8,8 +8,8 @@ const config: ResourceConfig = {
   searchKeys: ["name"],
   fields: [
     { name: "name", label: "Nomi", type: "text", required: true, hint: "Masalan: Next.js" },
-    { name: "file", label: "Ikonka fayl nomi", type: "text", hint: "public/assets/img/icons/ ichidagi fayl nomi (nextjs)" },
-    { name: "ext", label: "Kengaytma", type: "text", hint: "svg / png" },
+    { name: "file", label: "Ikonka rasmi (yoki fayl nomi)", type: "image", hint: "Rasm yuklang. Yoki public ichidagi bo'lsa nomini qoldiring (masalan: nextjs)" },
+    { name: "ext", label: "Kengaytma (Faqat eski usul uchun)", type: "text", hint: "Yangi yuklangan rasm uchun bo'sh qoldiring" },
     { name: "order_index", label: "Tartib raqami", type: "number" },
   ],
 };
