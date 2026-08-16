@@ -53,32 +53,32 @@ export function WorkExperience({ experiences }: WorkExperienceProps) {
         <h3 className="text-2xl font-bold text-head mb-8">
           {t("workexp.title")}
         </h3>
-        <div className="overflow-hidden relative h-[180px] sm:h-[200px] lg:h-[220px]">
+        <div className="overflow-hidden relative h-[180px] sm:h-[200px] lg:h-[220px] group">
           {/* Fading effect on bottom and top if desired, but let's keep it clean */}
           <div className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-card to-transparent z-10 pointer-events-none" />
           <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-card to-transparent z-10 pointer-events-none" />
           <div
-            className="marquee-y-inner"
+            className="marquee-y-inner group-hover:[animation-play-state:paused]"
             style={{ animation: "marqueeY 10s linear infinite" }}
           >
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex flex-col gap-6 pb-6">
                 {experiences.map((exp) => (
-                  <div key={exp.id + i} className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-                    <div className="w-auto sm:w-[135px] shrink-0">
-                      <span className="text-[14px] sm:text-[18px] font-semibold text-p whitespace-nowrap">
+                  <div key={exp.id + i} className="flex items-start gap-4 sm:gap-6">
+                    <div className="w-[100px] sm:w-[130px] shrink-0 pt-1">
+                      <span className="text-[14px] sm:text-[15px] font-medium text-p whitespace-nowrap">
                         {exp.date}
                       </span>
                     </div>
-                    <div className="flex-1 flex items-center gap-3.5 sm:gap-4 w-full">
-                      <div className="w-[44px] h-[44px] sm:w-[56px] sm:h-[56px] shrink-0 rounded-2xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5 overflow-hidden">
+                    <div className="flex gap-3 sm:gap-4">
+                      <div className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] shrink-0 rounded-xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5">
                         {getCompanyIcon(exp.company)}
                       </div>
-                      <div className="flex flex-col min-w-0">
-                        <h4 className="text-[16px] sm:text-[18px] lg:text-[20px] font-bold text-head leading-snug" title={exp.title}>
+                      <div className="flex flex-col">
+                        <h4 className="text-[16px] sm:text-[17px] font-semibold text-head leading-snug">
                           {exp.title}
                         </h4>
-                        <span className="text-[13px] sm:text-[15px] lg:text-[16px] font-medium text-p mt-0.5" title={exp.company}>
+                        <span className="text-[14px] sm:text-[15px] font-medium text-p mt-0.5">
                           {exp.company}
                         </span>
                       </div>
