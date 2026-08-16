@@ -21,10 +21,37 @@ function LoginForm() {
     }
   }, [router, setup]);
 
+  const [attempts, setAttempts] = useState(0);
+  const [lockoutTime, setLockoutTime] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (lockoutTime && Date.now() < lockoutTime) {
+      const interval = setInterval(() => {
+        if (Date.now() >= lockoutTime) {
+          setLockoutTime(null);
+          setAttempts(0);
+        } else {
+          // just force re-render
+          setAttempts(prev => prev);
+        }
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [lockoutTime]);
+
   async function submit(e: React.FormEvent) {
     e.preventDefault();
+    if (lockoutTime && Date.now() < lockoutTime) {
+      setError(`Ko'p urinishlar! Iltimos ${Math.ceil((lockoutTime - Date.now()) / 1000)} soniya kuting.`);
+      return;
+    }
+    
     setError("");
     setLoading(true);
+    
+    // Add artificial delay to prevent rapid brute-forcing
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
     try {
       const res = await fetch("/api/auth/login", {
         method: "POST",
@@ -33,7 +60,14 @@ function LoginForm() {
       });
       const data = await res.json();
       if (!res.ok) {
-        setError(data.error || "Login xato");
+        const newAttempts = attempts + 1;
+        setAttempts(newAttempts);
+        if (newAttempts >= 3) {
+          setLockoutTime(Date.now() + 60000); // 1 minute lockout
+          setError("Juda ko'p xato urinishlar. Xavfsizlik tizimi blokladi. 60 soniya kuting.");
+        } else {
+          setError(data.error || "Login xato");
+        }
         return;
       }
       const from = searchParams.get("from");

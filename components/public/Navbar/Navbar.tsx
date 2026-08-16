@@ -288,7 +288,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="w-full sticky top-0 md:top-4 z-[99] pt-2 md:pt-0">
+    <header className="w-full sticky top-0 z-[99] bg-background/95 backdrop-blur-sm pt-3 pb-3 md:pt-4 md:pb-0 md:bg-transparent md:backdrop-blur-none">
       <div className="max-w-[1400px] mx-auto px-3">
         <div className="flex items-center justify-between bg-card rounded-2xl px-4 sm:px-6 py-3 shadow-[0_1px_10px_0px_rgba(26,31,44,0.25)]">          {/* Logo */}
           <Link
