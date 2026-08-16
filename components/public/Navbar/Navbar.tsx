@@ -288,7 +288,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="w-full sticky top-0 z-[99] bg-[#f8f9fa]/95 dark:bg-[#050505]/95 backdrop-blur-md pt-3 pb-3 md:pt-4 md:pb-0 md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none border-b border-border/50 md:border-none shadow-sm md:shadow-none">
+    <header className="w-full relative z-[99] pt-2 pb-2 md:sticky md:top-4 md:bg-transparent md:pt-0 md:pb-0 md:border-none md:shadow-none">
       <div className="max-w-[1400px] mx-auto px-3">
         <div className="flex items-center justify-between bg-card rounded-2xl px-4 sm:px-6 py-3 shadow-[0_1px_10px_0px_rgba(26,31,44,0.25)]">          {/* Logo */}
           <Link
@@ -312,8 +312,8 @@ export function Navbar() {
                   href={link.href}
                   className={`flex items-center whitespace-nowrap text-[15px] 2xl:text-[16px] font-semibold px-2.5 2xl:px-3 py-3 rounded-xl transition-all no-underline ${
                     isActive(link.href)
-                      ? "bg-navbar-hover  text-head dark:text-[#f0f2f5]"
-                      : "text-p hover:bg-navbar-hover hover:text-head"
+                      ? "bg-[#F0F2F5] dark:bg-[#1A1F2C] text-head dark:text-[#f0f2f5]"
+                      : "text-p hover:bg-[#F0F2F5] dark:hover:bg-[#1A1F2C] hover:text-head"
                   }`}
                 >
                   <span className="shrink-0">{link.icon}</span>
@@ -383,7 +383,7 @@ export function Navbar() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 left-0 bottom-0 w-[280px] bg-card z-[1000] flex flex-col p-6 transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 bottom-0 w-[280px] bg-white dark:bg-[#0c0c0e] z-[1000] flex flex-col p-6 transition-transform duration-300 shadow-2xl ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="mb-8">
           <Link
@@ -409,8 +409,8 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg text-[16px] font-semibold no-underline transition-all ${
                   isActive(link.href)
-                    ? "bg-navbar-hover  text-head dark:text-[#f0f2f5]"
-                    : "text-p hover:bg-navbar-hover hover:text-head"
+                    ? "bg-[#F0F2F5] dark:bg-[#1A1F2C] text-head dark:text-[#f0f2f5]"
+                    : "text-p hover:bg-[#F0F2F5] dark:hover:bg-[#1A1F2C] hover:text-head"
                 }`}
               >
                 {link.icon}
