@@ -64,21 +64,21 @@ export function WorkExperience({ experiences }: WorkExperienceProps) {
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex flex-col gap-6 pb-6">
                 {experiences.map((exp) => (
-                  <div key={exp.id + i} className="flex items-start gap-4 sm:gap-6">
-                    <div className="w-[100px] sm:w-[130px] shrink-0 pt-1">
-                      <span className="text-[14px] sm:text-[15px] font-medium text-p whitespace-nowrap">
+                  <div key={exp.id + i} className="flex items-start gap-3 sm:gap-4">
+                    <div className="w-[85px] sm:w-[110px] shrink-0 pt-1">
+                      <span className="text-[13px] sm:text-[15px] font-medium text-p whitespace-nowrap">
                         {exp.date}
                       </span>
                     </div>
-                    <div className="flex gap-3 sm:gap-4">
-                      <div className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] shrink-0 rounded-xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5">
+                    <div className="flex gap-3">
+                      <div className="w-[40px] h-[40px] sm:w-[46px] sm:h-[46px] shrink-0 rounded-xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5">
                         {getCompanyIcon(exp.company)}
                       </div>
                       <div className="flex flex-col">
-                        <h4 className="text-[16px] sm:text-[17px] font-semibold text-head leading-snug">
+                        <h4 className="text-[15px] sm:text-[16px] font-semibold text-head leading-snug line-clamp-2">
                           {exp.title}
                         </h4>
-                        <span className="text-[14px] sm:text-[15px] font-medium text-p mt-0.5">
+                        <span className="text-[13px] sm:text-[14px] font-medium text-p mt-0.5 line-clamp-1">
                           {exp.company}
                         </span>
                       </div>
