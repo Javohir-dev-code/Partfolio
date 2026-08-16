@@ -13,7 +13,7 @@ export function BlogContent({ posts }: { posts: IBlog[] }) {
     <section className="py-10 pb-8">
       <div className="max-w-[1300px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[32%_66%] gap-[26px]">
-          <div className="w-full self-start sticky top-[104px]">
+          <div className="w-full lg:self-start lg:sticky lg:top-[104px]">
             <ProfileCard />
           </div>
 

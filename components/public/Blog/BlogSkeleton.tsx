@@ -4,7 +4,7 @@ export function BlogSkeleton() {
       <div className="max-w-[1300px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[32%_66%] gap-[26px]">
           {/* Chap — Profile Card skeleton */}
-          <div className="self-start sticky top-[104px]">
+          <div className="lg:self-start lg:sticky lg:top-[104px]">
             <div className="p-6 bg-card rounded-2xl border border-border">
               <div className="h-[340px] mb-4 rounded-2xl bg-gray-100 dark:bg-gray-800 animate-pulse" />
               <div className="pb-6 flex flex-col gap-3">
