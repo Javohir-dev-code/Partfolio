@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/lib/i18n";
 import { Preloader } from "@/components/public/Preloader";
 
-const siteUrl = "https://zuxriddinhasanov.uz";
+const siteUrl = "https://zuxriddindev.uz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

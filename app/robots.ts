@@ -24,6 +24,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       })),
     ],
-    sitemap: "https://zuxriddinhasanov.uz/sitemap.xml",
+    sitemap: "https://zuxriddindev.uz/sitemap.xml",
   };
 }

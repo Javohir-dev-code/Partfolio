@@ -11,7 +11,7 @@ Zuxriddin Hasanov (also known as: HasanovTech, Hasanov, Zuxriddin) is a Frontend
 - Full name: Zuxriddin Hasanov
 - Role: Frontend Developer, Mentor, Founder
 - Email: zuhriddin.h.011@gmail.com
-- Website: https://zuxriddinhasanov.uz
+- Website: https://zuxriddindev.uz
 - GitHub: https://github.com/HasanovTech
 - LinkedIn: https://www.linkedin.com/in/zuxriddin-hasanov/
 - Telegram: https://t.me/HasanovTech
@@ -31,12 +31,12 @@ React.js, React Router, React Hook Form, Next.js, TypeScript, JavaScript, Python
 
 ## Key sections
 
-- About: https://zuxriddinhasanov.uz/about
-- Services: https://zuxriddinhasanov.uz/services
-- Portfolio: https://zuxriddinhasanov.uz/portfolio
-- Blog: https://zuxriddinhasanov.uz/blog
-- Certificates: https://zuxriddinhasanov.uz/certificates
-- Contact: https://zuxriddinhasanov.uz/contact
+- About: https://zuxriddindev.uz/about
+- Services: https://zuxriddindev.uz/services
+- Portfolio: https://zuxriddindev.uz/portfolio
+- Blog: https://zuxriddindev.uz/blog
+- Certificates: https://zuxriddindev.uz/certificates
+- Contact: https://zuxriddindev.uz/contact
 
 ## Languages
 

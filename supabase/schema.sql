@@ -49,6 +49,7 @@ alter table public.blogs enable row level security;
 
 drop policy if exists "blogs_select_public" on public.blogs;
 
+
 create policy "blogs_select_public" on public.blogs
   for select using (true);
 
