@@ -160,6 +160,44 @@ drop policy if exists "messages_delete_auth" on public.messages;
 create policy "messages_delete_auth" on public.messages
   for delete to authenticated using (true);
 
+-- ---------------- SITE SETTINGS (profil sozlamalari) ----------------
+create table if not exists public.site_settings (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null default 'Javohir Turayev',
+  role text default 'Front-end Developer',
+  avatar_url text default '/assets/img/avatar.png',
+  phone text default '+998 97 070 17 02',
+  telegram text default 'https://t.me/turayevdev',
+  instagram text default 'https://instagram.com/__turayevvv1',
+  github text default 'https://github.com/turayevdev',
+  updated_at timestamptz default now()
+);
+
+alter table public.site_settings enable row level security;
+
+drop policy if exists "site_settings_select_public" on public.site_settings;
+
+create policy "site_settings_select_public" on public.site_settings
+  for select using (true);
+
+drop policy if exists "site_settings_write_auth" on public.site_settings;
+
+create policy "site_settings_write_auth" on public.site_settings
+  for all to authenticated using (true) with check (true);
+
+insert into public.site_settings (id, full_name, role, avatar_url, phone, telegram, instagram, github)
+values (
+  '00000000-0000-0000-0000-000000000001',
+  'Javohir Turayev',
+  'Front-end Developer',
+  '/assets/img/avatar.png',
+  '+998 97 070 17 02',
+  'https://t.me/turayevdev',
+  'https://instagram.com/__turayevvv1',
+  'https://github.com/turayevdev'
+)
+on conflict (id) do nothing;
+
 -- ---------------- STORAGE: site rasmlari ----------------
 insert into storage.buckets (id, name, public)
 values ('site-images', 'site-images', true)

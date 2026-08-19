@@ -4,9 +4,11 @@ import Link from "next/link";
 import { ProfileCard } from "@/components/public/ProfileCard";
 import { ISkill } from "@/types";
 import { useLanguage } from "@/lib/i18n";
+import { useSiteSettings } from "@/components/public/useSiteSettings";
 
 export function AboutContent({ skills }: { skills: ISkill[] }) {
   const { t } = useLanguage();
+  const { settings } = useSiteSettings();
 
   return (
     <section className="py-10 pb-8">
@@ -25,12 +27,12 @@ export function AboutContent({ skills }: { skills: ISkill[] }) {
                     <h1 className="text-[30px] sm:text-[40px] font-bold text-head mb-5 sm:mb-6 leading-[1.3]">
                       {t("about.hi")}{" "}
                       <div className="block text-[#4770FF]">
-                        Javohir Turayev 👋
+                        {settings.full_name} 👋
                       </div>
                     </h1>
                     <p className="max-w-[460px] text-xl sm:text-2xl font-medium text-p leading-[1.33]">
                       <span className="font-bold text-head">
-                        {t("profile.role")}
+                        {settings.role || t("profile.role")}
                       </span>{" "}
                       {t("about.desc")}
                     </p>

@@ -12,6 +12,7 @@ const nav = [
   { href: "/admin/experiences", label: "Ish tajriba", icon: "M22 10v6M2 10l10-5 10 5-10 5zM6 12v5c3 3 9 3 12 0v-5" },
   { href: "/admin/certificates", label: "Sertifikatlar", icon: "M22 9h-5M18 5l4 4-4 4M1 3h4v18H1zM5 3h10v18H5zM9 8h2M9 12h2M9 16h2" },
   { href: "/admin/messages", label: "Xabarlar", icon: "M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5zM9 10h6M9 14h4" },
+  { href: "/admin/settings", label: "Profil sozlamalari", icon: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 8a7 7 0 0 1 14 0" },
 ];
 
 export function AdminShell({ children }: { children: React.ReactNode }) {

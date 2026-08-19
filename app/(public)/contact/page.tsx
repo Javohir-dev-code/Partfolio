@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ProfileCard } from "@/components/public/ProfileCard";
 import { useLanguage } from "@/lib/i18n";
+import { useSiteSettings } from "@/components/public/useSiteSettings";
 
 interface FormState {
   name: string;
@@ -15,6 +16,7 @@ type Status = "idle" | "loading" | "success" | "error";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const { settings } = useSiteSettings();
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
@@ -77,7 +79,7 @@ export default function Contact() {
                 {/* Contact info */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-7">
                   <Link
-                    href="tel:+998970701702"
+                    href={`tel:${settings.phone.replace(/[^\d+]/g, "")}`}
                     className="flex items-center gap-4 bg-mini-card rounded-2xl p-6 no-underline transition-all hover:border hover:border-[#4770FF]/40"
                   >
                     <span className="shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-[#4770FF]/10 text-[#4770FF]">
@@ -90,12 +92,12 @@ export default function Contact() {
                         {t("contact.phone")}
                       </span>
                       <span className="block text-lg font-semibold text-head truncate">
-                        +998 97 070 17 02
+                        {settings.phone}
                       </span>
                     </span>
                   </Link>
                   <Link
-                    href="https://t.me/turayevdev"
+                    href={settings.telegram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 bg-mini-card rounded-2xl p-6 no-underline transition-all hover:border hover:border-[#4770FF]/40"
@@ -110,7 +112,7 @@ export default function Contact() {
                         {t("contact.telegram")}
                       </span>
                       <span className="block text-lg font-semibold text-head truncate">
-                        @turayevdev
+                        {"@" + settings.telegram.replace(/^https?:\/\/(?:t\.me|telegram\.me)\/?/i, "")}
                       </span>
                     </span>
                   </Link>

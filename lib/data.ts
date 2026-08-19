@@ -4,9 +4,12 @@ import {
   IExperience,
   IBlog,
   ICertificate,
+  ISiteSettings,
 } from "@/types";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { createClient } from "@/lib/supabase/server";
+import { DEFAULT_SETTINGS } from "@/lib/settings";
+export { DEFAULT_SETTINGS };
 
 export const mockExperiences: IExperience[] = [];
 
@@ -131,4 +134,23 @@ export async function getBlogs(): Promise<IBlog[]> {
 
 export async function getCertificates(): Promise<ICertificate[]> {
   return withSupabase<ICertificate[]>("certificates", async () => mockCertificates);
+}
+
+export async function getSettings(): Promise<ISiteSettings> {
+  if (!isSupabaseConfigured()) {
+    return DEFAULT_SETTINGS;
+  }
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from("site_settings")
+      .select("*")
+      .limit(1)
+      .maybeSingle();
+    if (error) throw error;
+    return { ...DEFAULT_SETTINGS, ...(data ?? {}) };
+  } catch (e) {
+    console.error("[supabase] site_settings fetch failed:", e);
+    return DEFAULT_SETTINGS;
+  }
 }

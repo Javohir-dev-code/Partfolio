@@ -62,3 +62,15 @@ export interface ICertificate {
   order_index: number;
   created_at: string;
 }
+
+export interface ISiteSettings {
+  id?: string;
+  full_name: string;
+  role: string;
+  avatar_url: string;
+  phone: string;
+  telegram: string;
+  instagram: string;
+  github: string;
+  updated_at?: string;
+}
