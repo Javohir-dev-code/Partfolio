@@ -50,13 +50,13 @@ export function AboutContent({ skills }: { skills: ISkill[] }) {
                   <div className="flex gap-6 sm:gap-10">
                     <div>
                       <h3 className="text-[32px] sm:text-[40px] font-semibold text-head mb-1">
-                        2+
+                        1+
                       </h3>
                       <p className="text-base text-p">{t("about.yearExp")}</p>
                     </div>
                     <div>
                       <h3 className="text-[32px] sm:text-[40px] font-semibold text-head mb-1">
-                        7+
+                        2+
                       </h3>
                       <p className="text-base text-p ">{t("about.projectCompleted")}</p>
                     </div>

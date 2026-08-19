@@ -54,7 +54,7 @@ export function Stats() {
 
   const items = [
     {
-      target: 2,
+      target: 1,
       suffix: "+",
       label: t("stats.years"),
       icon: (
@@ -71,7 +71,7 @@ export function Stats() {
       ),
     },
     {
-      target: 7,
+      target: 2,
       suffix: "+",
       label: t("stats.projects"),
       icon: (
@@ -86,7 +86,7 @@ export function Stats() {
       ),
     },
     {
-      target: 17,
+      target: 6,
       suffix: "+",
       label: t("stats.techs"),
       icon: (
