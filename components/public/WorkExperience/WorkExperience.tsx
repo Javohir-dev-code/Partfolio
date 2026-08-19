@@ -58,47 +58,80 @@ export function WorkExperience({ experiences }: WorkExperienceProps) {
             {t("workexp.title")}
           </h3>
           <div 
-            className="overflow-hidden relative h-[180px] sm:h-[200px] lg:h-[220px]"
+            className={`overflow-hidden relative ${experiences.length > 3 ? "h-[180px] sm:h-[200px] lg:h-[220px]" : "min-h-[100px]"}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <div className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-card to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-card to-transparent z-10 pointer-events-none" />
-            <div
-              className="marquee-y-inner"
-              style={{ animation: `marqueeY 10s linear infinite ${isHovered ? 'paused' : 'running'}` }}
-            >
-              {[...Array(2)].map((_, i) => (
-                <div key={i} className="flex flex-col gap-6 pb-6">
-                  {experiences.map((exp) => (
-                    <div 
-                      key={exp.id + i} 
-                      className="flex items-start gap-3 sm:gap-4 cursor-pointer hover:bg-card/80 p-2 -m-2 rounded-xl transition-all hover:shadow-sm"
-                      onClick={() => setSelectedExp(exp)}
-                    >
-                      <div className="w-[85px] sm:w-[110px] shrink-0 pt-1">
-                        <span className="text-[13px] sm:text-[15px] font-medium text-p whitespace-nowrap">
-                          {exp.date}
-                        </span>
-                      </div>
-                      <div className="flex gap-3">
-                        <div className="w-[40px] h-[40px] sm:w-[46px] sm:h-[46px] shrink-0 rounded-xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5">
-                          {getCompanyIcon(exp.company)}
+            {experiences.length > 3 ? (
+              <>
+                <div className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-card to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-card to-transparent z-10 pointer-events-none" />
+                <div
+                  className="marquee-y-inner"
+                  style={{ animation: `marqueeY 12s linear infinite ${isHovered ? 'paused' : 'running'}` }}
+                >
+                  {[...Array(2)].map((_, i) => (
+                    <div key={i} className="flex flex-col gap-6 pb-6">
+                      {experiences.map((exp) => (
+                        <div 
+                          key={exp.id + "-" + i} 
+                          className="flex items-start gap-3 sm:gap-4 cursor-pointer hover:bg-card/80 p-2 -m-2 rounded-xl transition-all hover:shadow-sm"
+                          onClick={() => setSelectedExp(exp)}
+                        >
+                          <div className="w-[85px] sm:w-[110px] shrink-0 pt-1">
+                            <span className="text-[13px] sm:text-[15px] font-medium text-p whitespace-nowrap">
+                              {exp.date}
+                            </span>
+                          </div>
+                          <div className="flex gap-3">
+                            <div className="w-[40px] h-[40px] sm:w-[46px] sm:h-[46px] shrink-0 rounded-xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5">
+                              {getCompanyIcon(exp.company)}
+                            </div>
+                            <div className="flex flex-col">
+                              <h4 className="text-[15px] sm:text-[16px] font-semibold text-head leading-snug line-clamp-2">
+                                {exp.title}
+                              </h4>
+                              <span className="text-[13px] sm:text-[14px] font-medium text-p mt-0.5 line-clamp-1">
+                                {exp.company}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                        <div className="flex flex-col">
-                          <h4 className="text-[15px] sm:text-[16px] font-semibold text-head leading-snug line-clamp-2">
-                            {exp.title}
-                          </h4>
-                          <span className="text-[13px] sm:text-[14px] font-medium text-p mt-0.5 line-clamp-1">
-                            {exp.company}
-                          </span>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   ))}
                 </div>
-              ))}
-            </div>
+              </>
+            ) : (
+              <div className="flex flex-col gap-6">
+                {experiences.map((exp) => (
+                  <div 
+                    key={exp.id} 
+                    className="flex items-start gap-3 sm:gap-4 cursor-pointer hover:bg-card/80 p-2 -m-2 rounded-xl transition-all hover:shadow-sm"
+                    onClick={() => setSelectedExp(exp)}
+                  >
+                    <div className="w-[85px] sm:w-[110px] shrink-0 pt-1">
+                      <span className="text-[13px] sm:text-[15px] font-medium text-p whitespace-nowrap">
+                        {exp.date}
+                      </span>
+                    </div>
+                    <div className="flex gap-3">
+                      <div className="w-[40px] h-[40px] sm:w-[46px] sm:h-[46px] shrink-0 rounded-xl bg-mini-card border border-border/50 flex items-center justify-center p-2.5">
+                        {getCompanyIcon(exp.company)}
+                      </div>
+                      <div className="flex flex-col">
+                        <h4 className="text-[15px] sm:text-[16px] font-semibold text-head leading-snug line-clamp-2">
+                          {exp.title}
+                        </h4>
+                        <span className="text-[13px] sm:text-[14px] font-medium text-p mt-0.5 line-clamp-1">
+                          {exp.company}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
