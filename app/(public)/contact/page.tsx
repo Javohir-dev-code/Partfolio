@@ -77,26 +77,25 @@ export default function Contact() {
                 {/* Contact info */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-7">
                   <Link
-                    href="mailto:zuhriddin.h.011@gmail.com"
+                    href="tel:+998970701702"
                     className="flex items-center gap-4 bg-mini-card rounded-2xl p-6 no-underline transition-all hover:border hover:border-[#4770FF]/40"
                   >
                     <span className="shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-[#4770FF]/10 text-[#4770FF]">
-                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                        <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.6" />
-                        <path d="m2 7 10 6 10-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                       </svg>
                     </span>
                     <span className="min-w-0">
                       <span className="block text-[15px] font-medium text-p mb-1">
-                        {t("contact.email")}
+                        {t("contact.phone")}
                       </span>
                       <span className="block text-lg font-semibold text-head truncate">
-                        zuhriddin.h.011@gmail.com
+                        +998 97 070 17 02
                       </span>
                     </span>
                   </Link>
                   <Link
-                    href="https://t.me/HasanovTech"
+                    href="https://t.me/turayevdev"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 bg-mini-card rounded-2xl p-6 no-underline transition-all hover:border hover:border-[#4770FF]/40"
@@ -111,7 +110,7 @@ export default function Contact() {
                         {t("contact.telegram")}
                       </span>
                       <span className="block text-lg font-semibold text-head truncate">
-                        @HasanovTech
+                        @turayevdev
                       </span>
                     </span>
                   </Link>

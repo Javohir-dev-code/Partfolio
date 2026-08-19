@@ -5,41 +5,40 @@ import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/lib/i18n";
 import { Preloader } from "@/components/public/Preloader";
 
-const siteUrl = "https://zuxriddindev.uz";
+const siteUrl = "https://turayevdev.uz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "Zuxriddin Hasanov Portfolio",
+  applicationName: "Javohir Turayev Portfolio",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   title: {
-    default: "Zuxriddin Hasanov | Frontend Developer & Mentor",
-    template: "%s | Zuxriddin Hasanov",
+    default: "Javohir Turayev | Frontend Developer",
+    template: "%s | Javohir Turayev",
   },
   description:
-    "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy (OWA), and Founder of TypeX.uz & Eko-gps.uz. Specializing in React, Next.js, and modern web applications.",
+    "Javohir Turayev Uyg’unovich (turayevdev) - Passionate Front-end Developer specializing in building modern, responsive, and user-friendly web applications.",
   keywords: [
-    "Zuxriddin Hasanov",
-    "HasanovTech",
+    "Javohir Turayev",
+    "Javohir Turayev Uyg'unovich",
+    "turayevdev",
     "Frontend Developer",
-    "Open Web Academy",
-    "Mentor",
-    "TypeX.uz",
-    "Eko-gps.uz",
-    "React",
-    "Next.js",
-    "UzbekUSA",
+    "HTML5",
+    "CSS3",
+    "Sass",
+    "JavaScript",
     "Developer",
     "Frontend Dasturchi",
+    "Portfolio",
   ],
   authors: [
-    { name: "Zuxriddin Hasanov", url: "https://github.com/HasanovTech" },
+    { name: "Javohir Turayev", url: "https://t.me/turayevdev" },
   ],
-  creator: "Zuxriddin Hasanov",
-  publisher: "Zuxriddin Hasanov",
+  creator: "Javohir Turayev",
+  publisher: "Javohir Turayev",
   alternates: {
     canonical: "/",
     languages: {
@@ -49,20 +48,20 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Zuxriddin Hasanov | Frontend Developer & Mentor",
+    title: "Javohir Turayev | Frontend Developer",
     description:
-      "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz.",
+      "Javohir Turayev (turayevdev) - Passionate Front-end Developer specializing in building modern, responsive, and user-friendly web applications.",
     url: siteUrl,
-    siteName: "Zuxriddin Hasanov Portfolio",
+    siteName: "Javohir Turayev Portfolio",
     type: "website",
     locale: "en_US",
     alternateLocale: ["uz_UZ", "ru_RU"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zuxriddin Hasanov | Frontend Developer & Mentor",
+    title: "Javohir Turayev | Frontend Developer",
     description:
-      "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz.",
+      "Javohir Turayev (turayevdev) - Passionate Front-end Developer specializing in modern web applications.",
   },
   robots: {
     index: true,
@@ -94,13 +93,13 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Zuxriddin Hasanov",
-    "alternateName": ["HasanovTech", "Hasanov", "Zuxriddin"],
-    "jobTitle": ["Frontend Developer", "Mentor", "Founder"],
+    "name": "Javohir Turayev",
+    "alternateName": ["turayevdev", "Javohir Turayev Uyg’unovich", "Javohir"],
+    "jobTitle": ["Frontend Developer"],
     "description":
-      "Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eko-gps.uz.",
+      "Front-end Developer specializing in modern, responsive, and user-friendly web applications.",
     "url": siteUrl,
-    "email": "mailto:zuhriddin.h.011@gmail.com",
+    "telephone": "+998970701702",
     "image": `${siteUrl}/opengraph-image`,
     "nationality": "Uzbekistan",
     "address": {
@@ -108,41 +107,30 @@ export default function RootLayout({
       "addressCountry": "UZ",
     },
     "sameAs": [
-      "https://github.com/HasanovTech",
-      "https://www.linkedin.com/in/zuxriddin-hasanov/",
-      "https://t.me/HasanovTech",
-      "https://instagram.com/root_v7be",
+      "https://t.me/turayevdev",
+      "https://instagram.com/__turayevvv1",
+      "https://github.com/turayevdev",
     ],
-    "worksFor": [
-      { "@type": "Organization", "name": "Open Web Academy", "url": "https://www.openwebacademy.uz" },
-      { "@type": "Organization", "name": "TypeX.uz", "url": "https://typex.uz" },
-      { "@type": "Organization", "name": "Eko-gps.uz", "url": "https://eko-gps.uz" },
-      { "@type": "Organization", "name": "UzbekUSA.com" },
-    ],
-    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Open Web Academy" },
     "knowsAbout": [
-      "React.js",
-      "React Router",
-      "React Hook Form",
-      "Next.js",
-      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Sass",
       "JavaScript",
-      "Python",
-      "Tailwind CSS",
-      "Linux",
+      "Git",
+      "GitHub",
     ],
   };
 
   const websiteLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Zuxriddin Hasanov - Portfolio",
-    "alternateName": "Zuxriddin Hasanov Frontend Developer",
+    "name": "Javohir Turayev - Portfolio",
+    "alternateName": "Javohir Turayev Frontend Developer",
     "url": siteUrl,
     "inLanguage": ["en", "uz", "ru"],
     "author": {
       "@type": "Person",
-      "name": "Zuxriddin Hasanov",
+      "name": "Javohir Turayev",
       "url": `${siteUrl}/`,
     },
   };
@@ -152,7 +140,7 @@ export default function RootLayout({
     "@type": "ProfilePage",
     "url": `${siteUrl}/`,
     "inLanguage": ["en", "uz", "ru"],
-    "name": "Zuxriddin Hasanov - Portfolio",
+    "name": "Javohir Turayev - Portfolio",
     "dateModified": new Date().toISOString().slice(0, 10),
     "mainEntity": {
       "@id": `${siteUrl}/#person`,

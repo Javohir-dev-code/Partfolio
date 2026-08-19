@@ -10,7 +10,7 @@ const config: ResourceConfig = {
     { name: "title", label: "Lavozim", type: "text", required: true, hint: "Masalan: Frontend Developer & Mentor" },
     { name: "company", label: "Kompaniya", type: "text", required: true, hint: "Masalan: Open Web Academy" },
     { name: "date", label: "Davr", type: "text", hint: "Masalan: 2026 - Present" },
-    { name: "logo", label: "Logo", type: "image", hint: "Yoki logo fayl yo'li: /assets/img/projects/owa-logo.png" },
+    { name: "logo", label: "Logo", type: "image", hint: "Yoki logo fayl yo'li: /assets/img/logo.png" },
     { name: "order_index", label: "Tartib raqami", type: "number" },
   ],
 };

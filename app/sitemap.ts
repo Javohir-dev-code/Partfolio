@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getBlogs } from "@/lib/data";
 
-const base = "https://zuxriddindev.uz";
+const base = "https://turayevdev.uz";
 
 const routes = [
   "",

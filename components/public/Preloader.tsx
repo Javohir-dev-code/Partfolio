@@ -33,7 +33,7 @@ export function Preloader() {
           <div className="absolute inset-0 rounded-full border-2 border-[#4770FF]/20 border-t-[#4770FF] animate-spin" />
           <div className="absolute inset-2 rounded-full border-2 border-[#4770FF]/20 border-b-[#4770FF] animate-spin [animation-direction:reverse] [animation-duration:1.2s]" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xl font-bold text-[#4770FF]">ZH</span>
+            <span className="text-xl font-bold text-[#4770FF]">JT</span>
           </div>
         </div>
         <div className="w-40 h-1 bg-mini-card rounded-full overflow-hidden">
@@ -43,7 +43,7 @@ export function Preloader() {
           />
         </div>
         <span className="text-sm font-medium text-p tracking-widest uppercase">
-          Zuxriddin Hasanov
+          Javohir Turayev
         </span>
       </div>
     </div>

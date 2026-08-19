@@ -5,8 +5,8 @@ import { getProjects } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Zuxriddin Hasanov",
-  description: "Explore projects built by Zuxriddin Hasanov - TypeX.uz, Eko-gps.uz, UzbekUSA and more.",
+  title: "Portfolio | Javohir Turayev",
+  description: "Explore frontend projects built by Javohir Turayev.",
   alternates: {
     canonical: "/portfolio",
     languages: {
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Portfolio — Zuxriddin Hasanov",
-    description: "Explore projects built by Zuxriddin Hasanov - TypeX.uz, Eko-gps.uz, UzbekUSA and more.",
+    title: "Portfolio — Javohir Turayev",
+    description: "Explore frontend projects built by Javohir Turayev.",
   },
 };
 

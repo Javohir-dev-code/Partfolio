@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Zuxriddin Hasanov - Frontend Developer & Mentor";
+export const alt = "Javohir Turayev - Frontend Developer";
 
 export default function og() {
   return new ImageResponse(
@@ -33,7 +33,7 @@ export default function og() {
             color: "#ffffff",
           }}
         >
-          ZH
+          JT
         </div>
         <div
           style={{
@@ -45,7 +45,7 @@ export default function og() {
             letterSpacing: 1,
           }}
         >
-          Zuxriddin Hasanov
+          Javohir Turayev
         </div>
         <div
           style={{
@@ -56,7 +56,7 @@ export default function og() {
             color: "#7fa0ff",
           }}
         >
-          Frontend Developer &amp; Mentor
+          Frontend Developer
         </div>
         <div
           style={{
@@ -67,7 +67,7 @@ export default function og() {
             color: "#9aa3b2",
           }}
         >
-          React · Next.js · TypeScript
+          HTML · CSS · Sass · JavaScript
         </div>
       </div>
     ),

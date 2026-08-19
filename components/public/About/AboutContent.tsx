@@ -25,7 +25,7 @@ export function AboutContent({ skills }: { skills: ISkill[] }) {
                     <h1 className="text-[30px] sm:text-[40px] font-bold text-head mb-5 sm:mb-6 leading-[1.3]">
                       {t("about.hi")}{" "}
                       <div className="block text-[#4770FF]">
-                        Zuxriddin Hasanov 👋
+                        Javohir Turayev 👋
                       </div>
                     </h1>
                     <p className="max-w-[460px] text-xl sm:text-2xl font-medium text-p leading-[1.33]">

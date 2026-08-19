@@ -11,8 +11,8 @@ const config: ResourceConfig = {
     { name: "subtitle", label: "Tavsif", type: "text", full: true, hint: "Masalan: Typing test platformasi - Asoschi" },
     { name: "image", label: "Rasm (dark mode)", type: "image" },
     { name: "image_light", label: "Rasm (light mode)", type: "image" },
-    { name: "detail_link", label: "Detail link", type: "text", hint: "Masalan: https://typex.uz" },
-    { name: "site_link", label: "Sayt linki", type: "text", hint: "Masalan: https://typex.uz" },
+    { name: "detail_link", label: "Detail link", type: "text", hint: "Masalan: https://example.com" },
+    { name: "site_link", label: "Sayt linki", type: "text", hint: "Masalan: https://example.com" },
     { name: "order_index", label: "Tartib raqami", type: "number", hint: "Kichik raqam oldinroq chiqadi" },
   ],
 };

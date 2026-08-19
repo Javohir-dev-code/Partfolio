@@ -1,39 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Javohir Turayev — Portfolio
+
+Frontend developer portfolio (Next.js + Supabase) with a full admin panel.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and fill in Supabase credentials:
 
-## Learn More
+```bash
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+TELEGRAM_BOT_TOKEN=           # optional, for contact form notifications
+TELEGRAM_CHAT_ID=
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Supabase setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a project at [supabase.com](https://supabase.com)
+2. Open **SQL Editor** and run everything from `supabase/schema.sql`
+3. Create an admin user via **Authentication → Users → Add user** (email + password)
+4. Copy the project URL and anon key into `.env.local`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Admin panel
 
-## Deploy on Vercel
+Admin is available at `/admin` — sign in with the admin user created above.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details...111111
-11111
-111
-11111
+```bash
+npm run build
+npm run start
+```

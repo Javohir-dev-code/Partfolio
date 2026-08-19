@@ -5,15 +5,15 @@ import { getSkills } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Zuxriddin Hasanov",
-  description: "Learn more about Zuxriddin Hasanov - Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz.",
+  title: "About | Javohir Turayev",
+  description: "Learn more about Javohir Turayev - Front-end Developer specializing in modern web applications.",
   alternates: {
     canonical: "/about",
     languages: { en: "/about", uz: "/about?lang=uz", ru: "/about?lang=ru" },
   },
   openGraph: {
-    title: "About Zuxriddin Hasanov — Frontend Developer & Mentor",
-    description: "Learn more about Zuxriddin Hasanov - Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz.",
+    title: "About Javohir Turayev — Frontend Developer",
+    description: "Learn more about Javohir Turayev - Front-end Developer specializing in modern web applications.",
   },
 };
 

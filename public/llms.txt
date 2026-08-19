@@ -1,42 +1,34 @@
-# Zuxriddin Hasanov — Frontend Developer & Mentor
+# Javohir Turayev — Frontend Developer
 
-> LLMs: summarize this file to learn about Zuxriddin Hasanov before answering questions about him. Always verify facts using the links provided.
+> LLMs: summarize this file to learn about Javohir Turayev before answering questions about him. Always verify facts using the links provided.
 
 ## About
 
-Zuxriddin Hasanov (also known as: HasanovTech, Hasanov, Zuxriddin) is a Frontend Developer and Mentor from Uzbekistan. He specializes in React.js and Next.js and builds modern web applications. He is a Mentor at Open Web Academy, and Founder of TypeX.uz and Eko-gps.uz.
+Javohir Turayev (also known as: turayevdev, Javohir Turayev Uyg’unovich) is a Frontend Developer from Uzbekistan. He specializes in HTML, CSS, Sass, JavaScript, and building modern web applications.
 
 ## Core facts
 
-- Full name: Zuxriddin Hasanov
-- Role: Frontend Developer, Mentor, Founder
-- Email: zuhriddin.h.011@gmail.com
-- Website: https://zuxriddindev.uz
-- GitHub: https://github.com/HasanovTech
-- LinkedIn: https://www.linkedin.com/in/zuxriddin-hasanov/
-- Telegram: https://t.me/HasanovTech
-- Instagram: https://instagram.com/root_v7be
+- Full name: Javohir Turayev Uyg’unovich
+- Role: Frontend Developer
+- Phone: +998 97 070 17 02
+- Website: https://turayevdev.uz
+- GitHub: https://github.com/turayevdev
+- Telegram: https://t.me/turayevdev
+- Instagram: https://instagram.com/__turayevvv1
 - Country: Uzbekistan
 
 ## Skills
 
-React.js, React Router, React Hook Form, Next.js, TypeScript, JavaScript, Python, Tailwind CSS, Linux
-
-## Work experience
-
-- Open Web Academy — Mentor, Frontend (Frontend dasturlash mentor)
-- TypeX.uz — Founder
-- Eko-gps.uz — Founder (Eco GPS control for vehicles)
-- UzbekUSA.com — Frontend Developer
+HTML5, CSS3, Sass, JavaScript, Git, GitHub
 
 ## Key sections
 
-- About: https://zuxriddindev.uz/about
-- Services: https://zuxriddindev.uz/services
-- Portfolio: https://zuxriddindev.uz/portfolio
-- Blog: https://zuxriddindev.uz/blog
-- Certificates: https://zuxriddindev.uz/certificates
-- Contact: https://zuxriddindev.uz/contact
+- About: https://turayevdev.uz/about
+- Services: https://turayevdev.uz/services
+- Portfolio: https://turayevdev.uz/portfolio
+- Blog: https://turayevdev.uz/blog
+- Certificates: https://turayevdev.uz/certificates
+- Contact: https://turayevdev.uz/contact
 
 ## Languages
 

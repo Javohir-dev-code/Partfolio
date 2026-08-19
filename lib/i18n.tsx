@@ -24,7 +24,8 @@ const translations = {
     "profile.desc":
       "Passionate Front-end Developer 🖥️ specializing in building modern, responsive, and user-friendly web applications.",
     "profile.bookCall": "Book A call",
-    "profile.copyEmail": "Copy Email",
+    "profile.copyEmail": "Copy Phone",
+    "profile.copyPhone": "Copy Phone",
     "profile.copied": "Copied!",
     "workexp.title": "Work Experience",
     "expert.title": "My Expert Area",
@@ -53,7 +54,7 @@ const translations = {
     "services.faqTitle": "Frequently Asked Questions",
     "services.faq1q": "What kind of projects do you specialize in?",
     "services.faq1a":
-      "I focus on building modern, responsive web applications using technologies like React, TypeScript, and Tailwind CSS.",
+      "I focus on building modern, responsive web applications using technologies like HTML, CSS, Sass, and JavaScript.",
     "services.faq2q": "Can you update or improve my existing website?",
     "services.faq2a":
       "Yes, I offer support for existing projects — including bug fixes, performance optimization, and new feature implementation.",
@@ -65,7 +66,7 @@ const translations = {
       "I start by understanding your goals, then plan the structure, choose the best tech stack, and keep you updated throughout the development process.",
     "services.faq5q": "How can I get in touch with you?",
     "services.faq5a":
-      "You can contact me via the form on this website, by email, or through Telegram. I usually respond within 24 hours.",
+      "You can contact me via the form on this website, by phone, or through Telegram. I usually respond within 24 hours.",
     "services.workTogether": "Let's 👋 Work Together",
     "services.workTogetherLine1": "Let's",
     "services.workTogetherLine2": "Work Together",
@@ -83,6 +84,7 @@ const translations = {
     "contact.subtitle":
       "Have a project in mind? I'd love to hear from you. Send me a message and I'll get back to you as soon as possible.",
     "contact.email": "Email",
+    "contact.phone": "Phone",
     "contact.telegram": "Telegram",
     "contact.name": "Name",
     "contact.namePh": "Enter your name",
@@ -110,7 +112,8 @@ const translations = {
     "profile.desc":
       "Zamonaviy, responsive va qulay veb-ilovalar yaratishga ixtisoslashgan Front-end Developer 🖥️",
     "profile.bookCall": "Qo'ng'iroq qilish",
-    "profile.copyEmail": "Emailni nusxalash",
+    "profile.copyEmail": "Raqamni nusxalash",
+    "profile.copyPhone": "Raqamni nusxalash",
     "profile.copied": "Nusxalandi!",
     "workexp.title": "Ish tajribasi",
     "expert.title": "Mening soham",
@@ -139,7 +142,7 @@ const translations = {
     "services.faqTitle": "Ko'p so'raladigan savollar",
     "services.faq1q": "Qanday loyihalarga ixtisoslashgansiz?",
     "services.faq1a":
-      "React, TypeScript va Tailwind CSS kabi texnologiyalardan foydalanib, zamonaviy va responsive veb-ilovalar yaratishga e'tibor qarataman.",
+      "HTML, CSS, Sass va JavaScript kabi texnologiyalardan foydalanib, zamonaviy va responsive veb-ilovalar yaratishga e'tibor qarataman.",
     "services.faq2q": "Mavjud saytimni yangilab yoki yaxshilab bera olasizmi?",
     "services.faq2a":
       "Ha, mavjud loyihalar uchun xizmat ko'rsataman — xatolarni tuzatish, ish faoliyatini optimallashtirish va yangi funksiyalar qo'shish.",
@@ -151,7 +154,7 @@ const translations = {
       "Maqsadlaringizni tushunishdan boshlayman, so'ngra strukturani rejalashtiraman, eng yaxshi texnologiyalarni tanlayman va butun jarayon davomida xabardor qilib boraman.",
     "services.faq5q": "Siz bilan qanday bog'lanishim mumkin?",
     "services.faq5a":
-      "Saytdagi forma, email yoki Telegram orqali bog'lanishingiz mumkin. Odatda 24 soat ichida javob beraman.",
+      "Saytdagi forma, telefon yoki Telegram orqali bog'lanishingiz mumkin. Odatda tez orada javob beraman.",
     "services.workTogether": "Keling 👋 Birga ishlaymiz",
     "services.workTogetherLine1": "Keling",
     "services.workTogetherLine2": "birga ishlaymiz",
@@ -169,6 +172,7 @@ const translations = {
     "contact.subtitle":
       "Fikringizdagi loyiha bormi? Sizni eshitishdan xursandman. Menga xabar yuboring, imkon qadar tez javob beraman.",
     "contact.email": "Email",
+    "contact.phone": "Telefon",
     "contact.telegram": "Telegram",
     "contact.name": "Ism",
     "contact.namePh": "Ismingizni kiriting",
@@ -195,8 +199,9 @@ const translations = {
     "profile.role": "Front-end разработчик",
     "profile.desc":
       "Front-end разработчик 🖥️, специализирующийся на создании современных, адаптивных и удобных веб-приложений.",
-    "profile.bookCall": "Заказать звонок",
-    "profile.copyEmail": "Копировать email",
+    "profile.bookCall": "Позвонить",
+    "profile.copyEmail": "Скопировать номер",
+    "profile.copyPhone": "Скопировать номер",
     "profile.copied": "Скопировано!",
     "workexp.title": "Опыт работы",
     "expert.title": "Моя специализация",
@@ -225,7 +230,7 @@ const translations = {
     "services.faqTitle": "Часто задаваемые вопросы",
     "services.faq1q": "На каких проектах вы специализируетесь?",
     "services.faq1a":
-      "Я создаю современные адаптивные веб-приложения на React, TypeScript и Tailwind CSS.",
+      "Я создаю современные адаптивные веб-приложения на HTML, CSS, Sass и JavaScript.",
     "services.faq2q": "Можете ли вы обновить или улучшить мой сайт?",
     "services.faq2a":
       "Да, я поддерживаю существующие проекты — исправление ошибок, оптимизация производительности и добавление новых функций.",
@@ -237,7 +242,7 @@ const translations = {
       "Я начинаю с понимания ваших целей, затем планирую структуру, выбираю лучший стек технологий и держу вас в курсе на протяжении всего процесса.",
     "services.faq5q": "Как с вами связаться?",
     "services.faq5a":
-      "Вы можете связаться через форму на сайте, по email или через Telegram. Обычно отвечаю в течение 24 часов.",
+      "Вы можете связаться через форму на сайте, по телефону или через Telegram. Обычно отвечаю в течение 24 часов.",
     "services.workTogether": "Давайте 👋 работать вместе",
     "services.workTogetherLine1": "Давайте",
     "services.workTogetherLine2": "работать вместе",
@@ -255,6 +260,7 @@ const translations = {
     "contact.subtitle":
       "Есть проект? Буду рад услышать вас. Отправьте сообщение, и я отвечу как можно скорее.",
     "contact.email": "Email",
+    "contact.phone": "Телефон",
     "contact.telegram": "Telegram",
     "contact.name": "Имя",
     "contact.namePh": "Введите ваше имя",

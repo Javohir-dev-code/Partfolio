@@ -31,13 +31,7 @@ export async function Hero() {
           <div className="flex flex-col gap-6">
             <WorkExperience experiences={experiences ?? []} />
             <ExpertArea
-              skills={
-                skills
-                  ? skills
-                      .filter((s) => s.id !== "18" && s.id !== "19")
-                      .slice(0, 6)
-                  : []
-              }
+              skills={skills ? skills.slice(0, 6) : []}
             />
           </div>
 

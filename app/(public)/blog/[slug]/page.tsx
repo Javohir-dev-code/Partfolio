@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${post.title} | Zuxriddin Hasanov`,
+    title: `${post.title} | Javohir Turayev`,
     description: post.content?.slice(0, 160) || post.title,
     openGraph: {
       title: post.title,

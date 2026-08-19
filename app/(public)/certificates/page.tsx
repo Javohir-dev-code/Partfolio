@@ -4,8 +4,8 @@ import { getCertificates } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Certificates | Zuxriddin Hasanov",
-  description: "Courses and certifications completed by Zuxriddin Hasanov to improve his skills.",
+  title: "Certificates | Javohir Turayev",
+  description: "Courses and certifications completed by Javohir Turayev to improve his skills.",
   alternates: {
     canonical: "/certificates",
     languages: {
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Certificates — Zuxriddin Hasanov",
-    description: "Courses and certifications completed by Zuxriddin Hasanov to improve his skills.",
+    title: "Certificates — Javohir Turayev",
+    description: "Courses and certifications completed by Javohir Turayev to improve his skills.",
   },
 };
 

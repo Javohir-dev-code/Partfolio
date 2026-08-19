@@ -5,15 +5,15 @@ import { getBlogs } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Zuxriddin Hasanov",
-  description: "Articles about web development, best practices, and modern technologies by Zuxriddin Hasanov.",
+  title: "Blog | Javohir Turayev",
+  description: "Articles about web development, best practices, and modern technologies by Javohir Turayev.",
   alternates: {
     canonical: "/blog",
     languages: { en: "/blog", uz: "/blog?lang=uz", ru: "/blog?lang=ru" },
   },
   openGraph: {
-    title: "Blog — Zuxriddin Hasanov",
-    description: "Articles about web development, best practices, and modern technologies by Zuxriddin Hasanov.",
+    title: "Blog — Javohir Turayev",
+    description: "Articles about web development, best practices, and modern technologies by Javohir Turayev.",
   },
 };
 

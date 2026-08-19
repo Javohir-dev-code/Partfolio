@@ -3,17 +3,17 @@ import { Hero } from "@/components/public/Hero";
 import { Services } from "@/components/public/Services";
 
 export const metadata: Metadata = {
-  title: "Zuxriddin Hasanov | Frontend Developer & Mentor",
+  title: "Javohir Turayev | Frontend Developer",
   description:
-    "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eko-gps.uz. Specializing in React, Next.js, and modern web applications.",
+    "Javohir Turayev (turayevdev) - Passionate Front-end Developer specializing in building modern, responsive, and user-friendly web applications.",
   alternates: {
     canonical: "/",
     languages: { en: "/", uz: "/?lang=uz", ru: "/?lang=ru" },
   },
   openGraph: {
-    title: "Zuxriddin Hasanov | Frontend Developer & Mentor",
+    title: "Javohir Turayev | Frontend Developer",
     description:
-      "Zuxriddin Hasanov (HasanovTech) - Passionate Front-end Developer, Mentor at Open Web Academy, and Founder of TypeX.uz & Eko-gps.uz. Specializing in React, Next.js, and modern web applications.",
+      "Javohir Turayev (turayevdev) - Passionate Front-end Developer specializing in building modern, responsive, and user-friendly web applications.",
   },
 };
 
