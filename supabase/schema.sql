@@ -198,27 +198,56 @@ values (
 )
 on conflict (id) do nothing;
 
--- ---------------- STORAGE: site rasmlari ----------------
-insert into storage.buckets (id, name, public)
-values ('site-images', 'site-images', true)
-on conflict (id) do nothing;
+-- ---------------- INITIAL DATA SEED (Boshlang'ich real ma'lumotlar) ----------------
+insert into public.skills (name, file, ext, order_index)
+values 
+  ('HTML5', 'html', 'svg', 1),
+  ('CSS3', 'css', 'svg', 2),
+  ('Sass/SCSS', 'sass', 'svg', 3),
+  ('JavaScript', 'javascript', 'svg', 4),
+  ('Git', 'git', 'svg', 5),
+  ('GitHub', 'github', 'svg', 6)
+on conflict do nothing;
 
-drop policy if exists "images_public_read" on storage.objects;
+insert into public.experiences (title, company, date, logo, order_index)
+values (
+  'Front-end Developer',
+  'Freelance & Loyihalar',
+  '2023 - Hozirgacha',
+  '/assets/img/avatar.png',
+  1
+)
+on conflict do nothing;
 
-create policy "images_public_read" on storage.objects
-  for select using (bucket_id = 'site-images');
+insert into public.projects (title, subtitle, image, site_link, order_index)
+values (
+  'Shaxsiy Portfolio Veb-sayt',
+  'Next.js 16, TypeScript, Tailwind CSS va Supabase yordamida yaratilgan zamonaviy portfolio',
+  '/assets/img/avatar.png',
+  'https://github.com/Javohir-dev-code/Partfolio',
+  1
+)
+on conflict do nothing;
 
-drop policy if exists "images_auth_write" on storage.objects;
+insert into public.certificates (title, issuer, date, image, order_index)
+values (
+  'Frontend Development Sertifikati',
+  'Dasturlash Kursi',
+  '2024',
+  '/assets/img/certificates/owa-cer.png',
+  1
+)
+on conflict do nothing;
 
-create policy "images_auth_write" on storage.objects
-  for insert to authenticated with check (bucket_id = 'site-images');
-
-drop policy if exists "images_auth_update" on storage.objects;
-
-create policy "images_auth_update" on storage.objects
-  for update to authenticated using (bucket_id = 'site-images');
-
-drop policy if exists "images_auth_delete" on storage.objects;
-
-create policy "images_auth_delete" on storage.objects
-  for delete to authenticated using (bucket_id = 'site-images');
+insert into public.blogs (title, slug, tag, read_time, date, image, content, order_index)
+values (
+  'Frontend dasturlashda zamonaviy texnologiyalar',
+  'frontend-zamonaviy-texnologiyalar',
+  'Frontend',
+  '5 min',
+  '2024',
+  '/assets/img/blog/aaa.png',
+  'HTML5, CSS3, Sass/SCSS va JavaScript yordamida tezkor, chiroyli va qulay veb-saytlar yaratish usullari.',
+  1
+)
+on conflict do nothing;
